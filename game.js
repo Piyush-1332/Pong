@@ -130,15 +130,21 @@ function drawEverything()	{
     colorRect(0,	0,	canvas.width,	canvas.height,	'black');
     canvasContext.fillStyle = 'white';
     canvasContext.font="30px Arial"
-    canvasContext.fillText("Player 2 is Winner",canvas.width/2,canvas.height/2);
-    cancelAnimationFrame();
+    canvasContext.fillText("Player 2 is Winner",(canvas.width/2)-50,canvas.height/2);
+    canvasContext.fillText("Press Enter to restart",(canvas.width/2)-50,(canvas.height/2)+40);
+    document.addEventListener('keydown',function(e){
+      if(e.keyCode == 13){
+        location.reload();
+      }
+    })
+    window.cancelAnimationFrame();
   }
   else if(flag === 2){
     colorRect(0,	0,	canvas.width,	canvas.height,	'black');
     canvasContext.fillStyle = 'white';
     canvasContext.font="30px Arial"
-    canvasContext.fillText("Player 1 is Winner",canvas.width/2,canvas.height/2);
-
+    canvasContext.fillText("Player 1 is Winner",(canvas.width/2)-50,canvas.height/2);
+    canvasContext.fillText("Press Enter to Restart",(canvas.width/2)-50,(canvas.height/2)+40);
     document.addEventListener('keydown',function(e){
       if(e.keyCode == 13){
         location.reload();
